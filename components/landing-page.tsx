@@ -438,7 +438,8 @@ export function LandingPageComponent() {
                   whileTap={{ scale: 0.98 }}
                   className="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all duration-300 relative overflow-hidden group"
                 >
-                  <span className="text-lg font-semibold relative z-10">Позвонить</span>
+                  <span href="tel:+998770318448" className="text-lg font-semibold relative z-10">Позвонить</span>
+                  <span href="tel:+998770318448" className="text-lg font-semibold relative z-10">Адрес Клиники </span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 relative z-10" />
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </motion.button>
