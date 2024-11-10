@@ -344,10 +344,10 @@ export function LandingPageComponent() {
             
             <a 
               href="tel:+998770318448" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-base font-medium transition-colors duration-200 flex items-center space-x-2"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 md:px-6 py-3 rounded-lg text-base font-medium transition-colors duration-200 flex items-center space-x-2"
             >
               <Phone className="w-5 h-5" />
-              <span>+998 77 031 84 48</span>
+              <span className="hidden md:inline">+998 77 031 84 48</span>
             </a>
           </div>
         </header>
