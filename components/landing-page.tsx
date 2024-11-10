@@ -313,7 +313,7 @@ export function LandingPageComponent() {
           })}
         </script>
       </Head>
-      <div className="min-h-screen bg-[#F8FAFC]">
+      <div className="min-h-screen bg-[#F8FAFC]" style={{ transform: 'scale(0.9)', transformOrigin: 'top center', width: '111.11%', marginLeft: '-5.56%' }}>
         {/* Header Section */}
         <header className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
