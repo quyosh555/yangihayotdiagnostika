@@ -128,7 +128,7 @@ const services = [
   {
     icon: SmilePlus,
     title: "Стоматология 24/7",
-    description: "Профессиональный уход за зубами и полостью рта в любое время.",
+    description: "Профессиональный уход за зубами и полостью рта в любе время.",
     bgColor: "bg-indigo-50",
     iconColor: "text-indigo-600"
   },
@@ -242,7 +242,7 @@ export function LandingPageComponent() {
         {/* Additional SEO tags */}
         <meta name="keywords" content="частная клиника в ташкенте, клиника в ташкенте, медицинский центр ташкент, врачи ташкент, диагностический центр, узи ташкент, анализы ташкент, круглосуточная клиника, Yangi Hayot Diagnostika" />
         <meta name="author" content="Yangi Hayot Diagnostika" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="language" content="Russian" />
         <meta name="geo.region" content="UZ-TO" />
@@ -811,7 +811,7 @@ export function LandingPageComponent() {
                         Записаться на консультацию
                       </DialogTitle>
                       <p className="text-sm text-center text-blue-100 mt-2">
-                        Оставьте свои данные, и мы свяжемся с вами в ближайшее время
+                        Остаьте свои данные, и мы свяжемся с вами в ближайшее время
                       </p>
                     </DialogHeader>
                     <div className="p-6">
@@ -858,7 +858,7 @@ export function LandingPageComponent() {
                         </Button>
                         
                         <p className="text-xs text-gray-500 text-center mt-4">
-                          Нажимая кнопку Отправить заявку, ��ы соглашаетесь с обработкой персональных данных
+                          Нажимая кнопку Отправить заявку, вы соглашаетесь с обработкой персональных данных
                         </p>
                       </form>
                     </div>
@@ -953,7 +953,7 @@ export function LandingPageComponent() {
                       className="bg-white hover:bg-gray-100 text-black px-6 py-3 rounded-md"
                       onClick={() => window.open('https://maps.app.goo.gl/QPztMEtPAzSbgnsP6', '_blank')}
                     >
-                      Открыть карту
+                      Отрыть карту
                     </button>
                   </div>
                 </div>
