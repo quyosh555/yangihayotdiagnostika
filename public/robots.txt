@@ -1,9 +1,23 @@
-# *
+# Global rules
 User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
+# Specific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandexbot
 Allow: /
 
 # Host
 Host: https://yangihayotclinic.uz
+
+# Crawl-delay
+Crawl-delay: 10
 
 # Sitemaps
 Sitemap: https://yangihayotclinic.uz/sitemap.xml
