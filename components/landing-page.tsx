@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, Mail, Users, Search, MessageSquare, User2, FileText, Calendar, CheckCircle, Star, Stethoscope,Microscope, Phone, MapPin, Clock, Facebook, Instagram, Ear, Baby, SquareActivity, ClipboardPlus, SmilePlus } from 'lucide-react'
+import { Mail, Users, Search, MessageSquare, User2, FileText, Calendar, CheckCircle, Star, Stethoscope, Microscope, Phone, MapPin, Clock, Facebook, Instagram, Ear, Baby, SquareActivity, ClipboardPlus, SmilePlus } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -66,7 +66,7 @@ const steps = [
   {
     icon: FileText,
     title: "Запросите консультацию",
-    description: "Оставьте заявку на персональную консультацию, указав свои симптомы и пожелания, чтобы получить рекомендации по подходящим методам лечения.",
+    description: "Оставьте заявку на персональную консультацию, указав свои симптомы и пжелания, чтобы получить рекомендации по подходящим методам лечения.",
   },
   {
     icon: Calendar,
@@ -221,7 +221,7 @@ export function LandingPageComponent() {
     <>
       <Head>
         <title>Yangi Hayot Diagnostika - Частная клиника в Ташкенте | Медицинский центр 24/7</title>
-        <meta name="description" content="Yangi Hayot Diagnostika - ведущая частная клиника в Ташкенте. Квалифицированные врачи, современное оборудование, медицинские услуги 24/7. Запишитесь онлайн!" />
+        <meta name="description" content="Yangi Hayot Diagnostika - ведущая частная клиника в Ташкенте. Квалифцированные врачи, современное оборудование, медицинские услуги 24/7. Запишитесь онлайн!" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -236,7 +236,7 @@ export function LandingPageComponent() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yangihayot" />
         <meta name="twitter:title" content="Yangi Hayot Diagnostika - Частная клиника в Ташкенте" />
-        <meta name="twitter:description" content="Ведущая частная клиника в Ташкенте. Современное оборудование, квалифицированные специалисты. Работаем 24/7." />
+        <meta name="twitter:description" content="Ведущая частна клиника в Ташкенте. Свременное оборудование, квалифицированные специалисты. Работаем 24/7." />
         <meta name="twitter:image" content="https://yangihayotclinic.uz/og-image.jpg" />
 
         {/* Additional SEO tags */}
@@ -410,7 +410,7 @@ export function LandingPageComponent() {
                       <Users className="w-6 h-6 text-blue-600" />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="font-medium text-lg">Опытные специалисты</h3>
+                      <h3 className="font-medium text-lg">Опытны специалисты</h3>
                       <p className="text-sm text-gray-500">Команда профессионалов</p>
                     </div>
                   </div>
@@ -433,14 +433,28 @@ export function LandingPageComponent() {
                     </div>
                   </div>
                 </div>
-                <div 
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all duration-300 relative overflow-hidden group"
-                >
-                  <a href="tel:+998770318448" className="text-lg font-semibold relative z-10">Позвонить</a>
-                  <a href="tel:+998770318448" className="text-lg font-semibold relative z-10">Адрес Клиники</a>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 relative z-10" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
+                <motion.div className="flex flex-col sm:flex-row gap-4 mt-16">
+                  <motion.a
+                    href="tel:+998770318448"
+                    whileHover={{ scale: 1.05, boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.5)" }}
+                    whileTap={{ scale: 0.98 }}
+                    className="inline-flex items-center justify-center space-x-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all duration-300 relative overflow-hidden group cursor-pointer"
+                  >
+                    <span className="text-lg font-semibold relative z-10">Позвонить</span>
+                    <Phone className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 relative z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </motion.a>
+
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => window.open('https://maps.app.goo.gl/QPztMEtPAzSbgnsP6', '_blank')}
+                    className="inline-flex items-center justify-center space-x-3 bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all duration-300 relative overflow-hidden group"
+                  >
+                    <span className="text-lg font-semibold relative z-10">Адрес клиники</span>
+                    <MapPin className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 relative z-10" />
+                  </motion.button>
+                </motion.div>
               </motion.div>
 
               <motion.div 
@@ -487,7 +501,7 @@ export function LandingPageComponent() {
                   БЫСТРОЕ РЕШЕНИЕ
                 </span>
                 <h2 className="text-3xl md:text-[40px] font-bold text-[#1E293B] leading-tight">
-                  4 постых шага для получения решения
+                  4 постых шага для получения решеня
                 </h2>
               </div>
               
@@ -785,7 +799,7 @@ export function LandingPageComponent() {
                 transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
                 className="absolute inset-0"
                 style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E")`,
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E")`,
                   backgroundSize: "cover",
                 }}
               />
@@ -810,7 +824,7 @@ export function LandingPageComponent() {
                         Записаться на консультацию
                       </DialogTitle>
                       <p className="text-sm text-center text-blue-100 mt-2">
-                        Оставьте свои данные, и мы ��вяжемся с вами в ближайшее время
+                        Оставьте свои данные, и мы свяжемся с вами в ближайшее время
                       </p>
                     </DialogHeader>
                     <div className="p-6">
